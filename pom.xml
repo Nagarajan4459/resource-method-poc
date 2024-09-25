@@ -66,13 +66,13 @@
 			<version>1.10.4</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>e0741c93-43e7-4d5d-a096-8c3b97015b78</groupId>
 			<artifactId>resource-method-poc</artifactId>
 			<version>1.0.1</version>
 			<classifier>raml</classifier>
 			<type>zip</type>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 
 	<repositories>
