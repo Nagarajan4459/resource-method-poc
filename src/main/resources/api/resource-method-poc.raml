@@ -1,0 +1,29 @@
+#%RAML 1.0
+title: resource-method-poc
+version: v1
+description: Checking the different of kind of endpoints
+
+traits:
+  resource-method-queryParameter:
+    queryParameters:
+      userId:
+        displayName: Customer user Id
+        type: string
+        pattern: ^DEF_DR|DEF_CR$
+        required: True
+
+
+/user/alive:
+  get:
+    description: Checking the application status
+    is: [
+        resource-method-queryParameter
+    ]
+    responses:
+      200:
+        description: Success
+        body:
+          application/json:
+            example:
+              value: 
+                HealthCheck: Success
