@@ -5,7 +5,7 @@
     </http:listener-config>
     <apikit:config name="resource-method-poc-config" api="resource-method-poc.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
     <configuration-properties doc:name="Configuration properties" doc:id="6ce40283-e104-4aa0-af9d-89be2ae594b2" file="resource-method-poc.dev.properties" />
-    <!-- <api-gateway:autodiscovery apiId="19898518" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="b91a6e8a-4cdd-4ba3-aeed-3e6c5913a9cb" flowRef="resource-method-poc-main" /> -->
+    <api-gateway:autodiscovery apiId="19898518" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="b91a6e8a-4cdd-4ba3-aeed-3e6c5913a9cb" flowRef="resource-method-poc-main" />
     <flow name="resource-method-poc-main">
         <http:listener config-ref="resource-method-poc-httpListenerConfig" path="/poc/resource-method-poc/v1/*">
             <http:response statusCode="#[vars.httpStatus default 200]">
